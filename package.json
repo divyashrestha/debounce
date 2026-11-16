@@ -1,0 +1,46 @@
+{
+  "name": "@dstha/debounce",
+  "version": "0.0.1",
+  "description": "A lightweight TypeScript React hook for debouncing values.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "tsup": "^9.0.0",
+    "typescript": "^6.0.3"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "debounce",
+    "typescript"
+  ],
+  "license": "MIT"
+}
